@@ -58,20 +58,23 @@
 
         <div class="dropdown mb-0">
           <a
-            class="btn btn-success dropdown-toggle
-            "
+            class="btn btn-success dropdown-toggle"
             href="#"
             role="button"
             id="dropdownMenuLink"
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-          <i class="fa-solid fa-user"></i> Jeff
+            <i class="fa-solid fa-user"></i> Jeff
           </a>
 
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <ul class="dropdown-menu navdrop" aria-labelledby="dropdownMenuLink">
             <li><a class="dropdown-item" href="#">Dashboard</a></li>
-            <li><a class="dropdown-item" href="#">Logout</a></li>
+            <li>
+              <a class="dropdown-item" href="#" style="background-color: white"
+                >Logout</a
+              >
+            </li>
           </ul>
         </div>
       </ul>
@@ -179,14 +182,44 @@
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Explicabo recusandae quasi velit, eum quisquam rem placeat veniam
-              debitis, nemo omnis perferendis libero laudantium et nulla
-              consequatur commodi dolore labore illo?
+              debitis
             </p>
             <a href="#">Read More</a>
           </div>
         </div>
       </div>
     </section>
+
+    <!-- content -->
+
+    <div class="content">
+      <div class="main-content">
+        <h1 class="recent-post-title">Recent Posts</h1>
+        <div class="post">
+          <img
+            src="assets/images/daniel-j-schwarz-yRio9NrkFVs-unsplash.jpg"
+            alt=""
+            class="post-image"
+          />
+          <div class="post-preview">
+            <h2>
+              <a href="single.html"
+                >The Strongest and sweetest songs yet remain to be sung</a
+              >
+            </h2>
+             <i class="fa fa-user" aria-hidden="true"></i> <span>Jeff</span>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <span>Mar 11,2023</span>
+            <p class="preview-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore
+              earum voluptatum ut dolorem enim ipsum magnam
+            </p>
+            <a href="single.html" class="btn btn-dark">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="sidebar"></div>
+    </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
