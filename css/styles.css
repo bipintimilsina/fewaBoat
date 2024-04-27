@@ -17,6 +17,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: poppins;
+  background-color: #f6f6f6;
 }
 
 /* body{background-color: black;} */
@@ -29,6 +30,23 @@ nav a {
   align-self: flex-start;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "lora", serif;
+  color: #5c5b5b;
+  font-weight: 700;
+  /* margin: 5px; */
+}
+
+a {
+  font-family: "lora";
+  color: #5c5b5b;
+}
+
 /* ------blog */
 #blog {
   display: flex;
@@ -38,6 +56,9 @@ nav a {
   flex-direction: column;
   padding: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.blog-box {
+  border-radius: 10px;
 }
 
 .blog-heading {
@@ -87,6 +108,7 @@ nav a {
   height: 100%; */
   width: 300px;
   height: 198.52px;
+  border-radius: 5px 5px;
 
   /* object-fit: cover;
   object-position: center; */
@@ -98,7 +120,7 @@ nav a {
   flex-direction: column;
 }
 .blog-text span {
-  color: #f33c3c;
+  color: #272727;
   font-size: 0.9rem;
 }
 
@@ -109,7 +131,7 @@ nav a {
 }
 
 .blog-text .blog-title:hover {
-  color: #f33c3c;
+  color: #006669;
   transition: all ease 0.3s;
 }
 
@@ -170,54 +192,165 @@ nav a {
   color: red;
 }
 
-
-
 /* content portion */
-.content{
-  width:90%;
-  margin:30px auto 30px;
-  border: 1px solid red;
+div.content {
+  width: 90%;
+  margin: 30px auto 30px;
+  /* border: 1px solid red; */
   display: flex;
-  justify-content :space-around;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
 }
 
-.content .main-content{
-  width: 70%;
-  border: 1px solid blue;
-  
-  
-}
-.recent-post-title{
-font-weight: 700;
+@media (max-width: 857px) {
+  div.content {
+    flex-direction: column;
+  }
 
+  div.main-content {
+  }
+
+  .content .sidebar,
+  #sidebar {
+    width: 100%;
+    /* background-color: red; */
+  }
+}
+
+.post-preview {
+  overflow: hidden;
+}
+
+.post-preview :first-child {
+  font-size: 2rem;
+  font-weight: bolder;
+  /* letter-spacing: 0; */
+  /* color: #006669; */
+}
+
+.post-preview :first-child:hover {
+  color: #006669;
+}
+
+.post-preview h2 ~ a {
+  background: white;
+  color: #5c5b5b;
+  transition: all 0.3s ease;
+}
+
+.post-preview h2 ~ a:hover {
+  background: #006669;
+}
+
+.post-preview span {
+  /* position:relative; */
+  margin-right: 10px;
+
+  /* background-color: red; */
+  /* content: "this is it baby"; */
+}
+.content .main-content {
+  /* width: 65%; */
+  /* border: 1px solid blue; */
+}
+.recent-post-title {
+  font-weight: 700;
+  /* font-size: 0.5em; */
   font-family: "lora", serif;
-
 }
 
-.content .sidebar{
-  width: 30%;
-  border:1px solid green;
-  height: 300px;
-
+.content .sidebar {
+  width: 25%;
+  /* border:1px solid green; */
+  height: 1240.59px;
 }
 
-.recent-post-title{
-  margin:20px;
+.recent-post-title {
+  margin: 20px;
 }
 
-.content .main-content .post{
+.content .main-content .post {
   width: 95%;
   height: 270px;
   margin: 10px auto;
+  margin-bottom: 20px;
   border: 5px;
   background-color: white;
   display: flex;
-  gap:10px;
-  flex-wrap: wrap;
-
-
+  gap: 10px;
+  border-radius: 10px;
+  flex-wrap: nowrap;
 }
-.content .main-content .post .post-image{
+.content .main-content .post .post-image {
   width: 40%;
   height: 100%;
+  border-radius:11px 5px 5px 11px;
+  
+}
+
+/* sidebar section search */
+.search {
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  flex-direction: column;
+}
+
+.search h1 {
+  align-self: flex-start;
+}
+
+.input-search {
+  border: 1px solid black;
+  border-radius: 5px;
+  height: 40px;
+  width: 90%;
+}
+
+.search h1 {
+  margin-left: 5%;
+}
+.Topics h1:first-child {
+  margin-left: 5%;
+}
+
+.sidebar h1 {
+  margin-left: 5%;
+  font-size: 2.5em;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.Topics {
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.Topics h1:first-child {
+  border-bottom: 1px solid #e0e0e0;
+  /* background-color: red; */
+}
+
+.Topics ul li {
+  padding: 16px;
+  /* transition: margin .15s ease; */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+ul li > a {
+  transition: margin 0.3s;
+  font-weight: 500;
+  display: block;
+  font-size: large;
+}
+
+.Topics a:hover {
+  margin-left: 10px;
+  cursor: pointer;
+  color: #5c5b5b;
 }
